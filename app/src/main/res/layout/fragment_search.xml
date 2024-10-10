@@ -1,61 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".ui.search.SearchFragment">
 
-    <!-- Поле для поиска -->
-    <EditText
-        android:id="@+id/search_field"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Должность, ключевые слова"
-        android:drawableLeft="@drawable/ic_search" />
-
-    <!-- Иконка кнопки фильтра -->
-    <ImageView
-        android:id="@+id/filter_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_filter" />
-
-    <!-- Блок рекомендаций -->
     <TextView
-        android:id="@+id/recommendations_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Рекомендации"
-        android:textSize="18sp"
-        android:padding="16dp" />
-
-    <RecyclerView
-        android:id="@+id/recommendations_recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layoutManager="LinearLayoutManager"
-        android:orientation="horizontal"
-        android:visibility="gone" />
+        android:layout_height="match_parent"
+        android:text="Hello" />
 
-    <!-- Заголовок вакансий -->
-    <TextView
-        android:id="@+id/vacancies_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Вакансии для вас"
-        android:textSize="18sp"
-        android:padding="16dp" />
-
-    <RecyclerView
-        android:id="@+id/vacancies_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <!-- Кнопка "Еще вакансии" -->
-    <Button
-        android:id="@+id/load_more_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Еще вакансии"
-        android:visibility="gone" />
-
-</LinearLayout>
+</FrameLayout>
