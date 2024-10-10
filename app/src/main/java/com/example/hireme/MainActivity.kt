@@ -1,5 +1,6 @@
 package com.example.hireme
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.root.setBackgroundColor(Color.BLACK)
 
         setupNavigation()
         fetchApiData()

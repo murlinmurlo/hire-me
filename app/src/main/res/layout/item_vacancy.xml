@@ -1,18 +1,79 @@
-<!-- res/layout/item_offer.xml -->
+<!-- fragment_search.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@android:color/black">
 
-    <TextView
-        android:id="@+id/vacancy_title"
+    <!-- Поле для поиска -->
+    <LinearLayout
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_search" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Должность, ключевые слова"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Иконка фильтра -->
+
+    <!-- Блок рекомендаций -->
+
+    <ImageView
+        android:id="@+id/filter_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"
-        android:text="HI HI"/>
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_filter" />
 
-    <!-- Добавьте другие элементы для отображения данных предложения здесь -->
+    <TextView
+        android:id="@+id/recommendations_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Рекомендации"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/offers_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <!-- Заголовок "Вакансии для вас" -->
+    <TextView
+        android:id="@+id/vacancies_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вакансии для вас"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vacancies_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Кнопка "Еще вакансии" -->
+    <Button
+        android:id="@+id/show_more_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Еще вакансии"
+        android:visibility="gone" />
 
 </LinearLayout>

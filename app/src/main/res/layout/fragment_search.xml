@@ -1,28 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- fragment_search.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.search.SearchFragment">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/black">
 
-    <!-- Поле для поиска -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/search_background">
+    <include
+        layout="@layout/top_search" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_search" />
+        <!-- Блок рекомендаций -->
+    <TextView
+    android:id="@+id/recommendations_header"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Рекомендации"
+    android:textSize="18sp"
+    android:layout_marginTop="16dp"
+    android:textColor="@android:color/white" />
 
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Должность, ключевые слова"
-            android:padding="8dp" />
-    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/offers_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:visibility="gone" />
 
-</FrameLayout>
+        <!-- Заголовок "Вакансии для вас" -->
+    <TextView
+    android:id="@+id/vacancies_header"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Вакансии для вас"
+    android:textSize="18sp"
+    android:layout_marginTop="16dp"
+    android:textColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/vacancies_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+        <!-- Кнопка "Еще вакансии" -->
+    <Button
+    android:id="@+id/show_more_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Еще вакансии"
+    android:visibility="gone" />
+</LinearLayout>

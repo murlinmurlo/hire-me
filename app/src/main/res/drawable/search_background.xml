@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#E0E0E0"/> <!-- Цвет фона -->
+    <solid android:color="#313234"/> <!-- Цвет фона -->
     <corners android:radius="8dp"/> <!-- Закругление углов -->
     <padding
         android:left="8dp"
